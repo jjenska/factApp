@@ -6,6 +6,7 @@ const errorHandler = (error, request, response, next) => {
 
   response.json({
     message: error.message,
+    // to show error lines
     stack: error.stack,
   });
 };

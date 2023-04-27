@@ -7,8 +7,7 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js"
   },
-  "author": "Jenni Erkkilä",
-  "license": "MIT",
+  "author": "Jenni",
   "dependencies": {
     "colors": "^1.4.0",
     "dotenv": "^16.0.3",

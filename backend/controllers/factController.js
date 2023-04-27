@@ -1,13 +1,13 @@
 const asyncHandler = require("express-async-handler"); // to catch errors without try/catch
 const Fact = require("../models/factModel");
 
-// GET /api/facts
+// METHOD: GET /api/facts
 const getFacts = asyncHandler(async (request, response) => {
   const facts = await Fact.find();
   response.json(facts);
 });
 
-// POST /api/facts
+// METHOD: POST /api/facts
 const setFact = asyncHandler(async (request, response) => {
   if (!request.body.fact) {
     response.status(400);
@@ -20,7 +20,7 @@ const setFact = asyncHandler(async (request, response) => {
   response.json(fact);
 });
 
-// PUT /api/facts/:id
+// METHOD: PUT /api/facts/:id
 const updateFact = asyncHandler(async (request, response) => {
   const fact = await Fact.findById(request.params.id);
 
@@ -37,7 +37,7 @@ const updateFact = asyncHandler(async (request, response) => {
   response.json(updatedFact);
 });
 
-// DELETE /api/facts/:id
+// METHOD: DELETE /api/facts/:id
 const deleteFact = asyncHandler(async (request, response) => {
   const fact = await Fact.findById(request.params.id);
 
@@ -47,9 +47,9 @@ const deleteFact = asyncHandler(async (request, response) => {
   }
 
   const deleted = await fact.deleteOne();
-  const reply = `Fact ${deleted.fact} deleted`;
+  const message = `Fact "${deleted.fact}" deleted`;
 
-  response.json(reply);
+  response.json(message);
 });
 
 module.exports = {

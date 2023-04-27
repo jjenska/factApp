@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Fact() {
   const [fact, setFact] = useState("");
@@ -27,12 +29,17 @@ function Fact() {
   };
 
   return (
-    <>
-      <h1>Get a random cat fact</h1>
-      <button onClick={getRandomFact}>Press here</button>
-      <span>{fact.fact}</span>
-      {/* {facts && facts.map((fact) => <p key={fact._id}>{fact.fact}</p>)} */}
-    </>
+    <div style={{ textAlign: "center", marginTop: 50 }}>
+      {/* <h1 style={{ textAlign: "center", marginBottom: 20 }}>
+        Get a random cat fact
+      </h1> */}
+      <Button variant="light" onClick={getRandomFact}>
+        Get a random cat fact
+      </Button>
+      <div style={{ textAlign: "center", marginTop: 20 }}>
+        <span>{fact.fact}</span>
+      </div>
+    </div>
   );
 }
 

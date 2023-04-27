@@ -5,7 +5,6 @@ const { errorHandler } = require("./middleware/errorMiddleware");
 const connectDB = require("./config/database");
 const port = process.env.PORT || 5000;
 
-// connection to MongoDB via mongoose
 connectDB();
 
 const app = express();

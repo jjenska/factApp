@@ -8,6 +8,7 @@
     "server": "nodemon backend/server.js"
   },
   "author": "Jenni",
+  "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
     "dotenv": "^16.0.3",

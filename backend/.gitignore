@@ -1,3 +1,8 @@
-.DS_Store
+# dependencies
 node_modules
+
+# desktop services
+.DS_Store
+
+# enviromental variables
 .env

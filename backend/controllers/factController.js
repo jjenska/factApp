@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler"); // to catch errors without try/catch
 const Fact = require("../models/factModel");
 
-// METHOD: GET /api/facts
+// METHOD: GET /api/facts >>> http://localhost:5000/api/facts
 const getFacts = asyncHandler(async (request, response) => {
   const facts = await Fact.find();
   response.json(facts);
@@ -37,7 +37,7 @@ const updateFact = asyncHandler(async (request, response) => {
   response.json(updatedFact);
 });
 
-// METHOD: DELETE /api/facts/:id
+// METHOD: DELETE /api/facts/:id >>> http://localhost:5000/api/facts/id
 const deleteFact = asyncHandler(async (request, response) => {
   const fact = await Fact.findById(request.params.id);
 

@@ -80,7 +80,7 @@ Seurasin tutoriaalin ohjeita HTTP-pyyntöjen virheiden käsittelyyn. Express:n o
 
 Express:n oletusasetuksilla virheen vastausmuotona oli HTML, joten funktiossa se muutettiin JSON-muotoon. Virheviestin lisäksi stack antaa tarkemmat rivitiedot.
 
-Tämän lisäksi asensin ohjeiden mukaan express-async-handler:n, jonka avulla controllerin metodit käärittiin asyncHandler:n sisälle, jotta virheiden käsittelemisessä ei tarvinnut hyödyntää erillisiä try-catch blokkeja.
+Tämän lisäksi asensin ohjeiden mukaan express-async-handler:n, jonka avulla controllerin metodit käärittiin asyncHandler:n sisälle, jotta virheiden käsittelemisessä ei tarvinnut hyödyntää erillisiä try-catch blokkeja. Tämän käyttö oli minulle täysin uutta, koodin sai tiivistettyä selkeämpään muotoon.
 
 #### 5. Tietokanta <a name="tietokanta"></a>
 
@@ -139,6 +139,6 @@ Seminaarityön alussa MongoDB oli minulle täysin uusi tietokanta, enkä ollut p
 
 Videotutoriaalien ongelmana on yleensä, että ne eivät ole välttämättä ajantasalla. Näin kävi esimerkiksi remove-funktion kanssa, jota kutsuttiin controllerissa poistamaan yksittäinen fakta id:n perusteella. Sain virheeksi "remove is not a function", ja pienen selvittelyn jälkeen paljastui, että kyseinen tapa oli vanhentunut. Löysin ajantasaiset operaatiot [dokumentaatiosta](https://mongoosejs.com/docs/queries.html), joten sitä olisi pitänyt hyödyntää tekemisen rinnalla alusta asti.
 
-Valitsin tutoriaalissa käytetyn Mongoose:n tietokannan yhteyden luomiseen, sekä datan ja kyselyiden käsittelyyn, koska minulla ei ollut mitään vertailupohjaa. Jälkeenpäin jäin pohtimaan, olisiko sovelluksessa ollut hyödyllisempää käyttää pelkkää MongoDB-ajuria. Hämmennystä Mongoose:ssa aiheutti esimerkiksi se, onko tietokantayhteyden sulkeminen tarpeellista. Tähän en löytänyt täysin suoraviivaista vastausta.
+Valitsin tutoriaalissa käytetyn Mongoose:n tietokannan yhteyden luomiseen, sekä datan ja kyselyiden käsittelyyn, koska minulla ei ollut mitään vertailupohjaa. Jälkeenpäin jäin pohtimaan, olisiko sovelluksessa ollut hyödyllisempää käyttää pelkkää MongoDB-ajuria. Tässä voisi olla yksi syventämisen aihe tulevaisuudessa. Hämmennystä Mongoose:ssa aiheutti esimerkiksi se, onko tietokantayhteyden sulkeminen tarpeellista. Tähän en löytänyt täysin suoraviivaista vastausta.
 
-Työ auttoi minua oppimaan enemmän projektin rakenteesta, ja ominaisuuksien jakamisesta osiin. Tietokannan data jäi hyvin yksinkertaiseksi, mutta toisaalta kokonaisuutta oli helpompi ymmärtää. Ideaa voisi kehittää monella tavalla eteenpäin. Tietokantaan voisi esimerkiksi luoda lisää kokoelmia, joita yhdistää toisiinsa. Lisäksi backend-puoelle voisi luoda graafisen käyttöliittymän, jonka kautta eri CRUD-toimintoja voisi suorittaa. Tällä hetkellä kaikki kulkee vain Postmanin kautta.
+Työ auttoi minua oppimaan projektin rakenteesta, ja ominaisuuksien jakamisesta osiin. Oli myös mukava saada vertailua Spring Boot:iin. Koin Express:n ja Noden käytön mielekkäänä, koska esimerkiksi eri riippuvuuksien asentaminen on kätevää. Tietokannan data jäi hyvin yksinkertaiseksi, mutta toisaalta kokonaisuutta oli helpompi ymmärtää. Projektia voisi kehittää monella tavalla eteenpäin. Haluaisin luoda backend-puolelle graafisen käyttöliittymän, jonka kautta eri CRUD-toimintoja voisi suorittaa. Tällä hetkellä kaikki kulkee vain esimerkiksi Postmanin kautta. Lisäksi kiinnostaisi käyttäjien ja tunnistautumisen luominen.

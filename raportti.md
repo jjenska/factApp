@@ -1,4 +1,4 @@
-# :books: MERN-sovellus
+# :books: MERN-stack -sovellus
 
 #### Sisällys
 
@@ -94,7 +94,7 @@ Lisäksi käytin Mongoose:a. [Mongoose](https://mongoosejs.com/) on olio pohjain
 
 ##### 5.2 Schema <a name="schema"></a>
 
-Mongoose Schema määrittelee kokoelmaan kuuluvien tiedostojen tietotyypit ([kts. täältä](https://mongoosejs.com/docs/guide.html#definition)). Loin yksinkertaisen scheman, jossa yksittäinen fakta esitetään merkkijonona (pakollinen kenttä), ja sille voidaan asettaa pituus, joka ilmoitetaan numerona:
+Mongoose Schema määrittelee kokoelmaan kuuluvien dokumenttien tietotyypit ([lähde täällä](https://mongoosejs.com/docs/guide.html#definition)). Loin yksinkertaisen scheman, jossa yksittäinen fakta esitetään merkkijonona (pakollinen kenttä), ja sille voidaan asettaa pituus, joka ilmoitetaan numerona:
 
 > ```javascript
 > const factSchema = mongoose.Schema({
@@ -109,7 +109,7 @@ Seuraamassani tutoriaalissa nostettiin esiin MongoDB:n tarjoama graafinen käytt
 
 ![Mongo Compass tiedon syöttäminen](/assets/insert_document.png)
 
-Valmista JSON-dataa pystyi syöttämään tietokantaan sellaisenaan. Kuvan faktat on poimittu avoimesta [rajapinnasta](https://catfact.ninja/). Tiedon syöttämisen jälkeen testasin datan siirtymisen Postmanilla.
+Kuvan faktat on poimittu avoimesta [rajapinnasta](https://catfact.ninja/). Tiedon syöttämisen jälkeen testasin datan siirtymisen Postmanilla.
 
 ### 6. React <a name="react"></a>
 
@@ -131,14 +131,14 @@ Käyttäjä voi painaa painiketta, joka kutsuu kyseistä funktiota, ja näyttä�
 > </div>
 > ```
 
-En saanut fetch-kutsua ensin toimimaan, sillä vastaan tuli CORS-virhe. Ratkaisin tämän lisäämällä package.json-tiedostoon proxyn serverin localhostille. Näin ollen fetch-kutsun osoitteeksi riitti ainoastaan "/api/facts". ([lähde](https://create-react-app.dev/docs/proxying-api-requests-in-development/)).
+En saanut fetch-kutsua ensin toimimaan, sillä vastaan tuli CORS-virhe. Ratkaisin tämän lisäämällä package.json-tiedostoon proxyn serverin localhostille. Näin ollen fetch-kutsun osoitteeksi riitti ainoastaan "/api/facts". ([lähde](https://create-react-app.dev/docs/proxying-api-requests-in-development/)). Hieman epäselväksi jäi, olisiko CORS ollut järkevämpää käsitellä backendin server.js-tiedostossa.
 
 ### 6. Yhteenveto <a name="yhteenveto"></a>
 
-Seminaarityön alussa MongoDB oli minulle täysin uusi tietokanta, enkä ollut pystyttänyt backend-serviä itsenäisesti Express:n ja Noden avulla. Koin saavani apua työhön kurssin idea-case-backend tehtävän teosta. REST-palveluiden toteuttamisesta minulla oli kokemusta ainoastaan Spring Boot:sta Javalla. Työn edetessä huomasin, että rakenteen hahmottamisessa myös tästä oli apua. Löytämäni videotutoriaali oli melko suoraviivainen. Toki jouduin hyödyntämään runsaasti eri ominaisuuksien omaa dokumentaatioita, jotta sain syvempää ymmärrystä tekemiseen.
+Seminaarityön alussa MongoDB oli minulle täysin uusi tietokanta, enkä ollut pystyttänyt backend-serveriä Express:n ja Noden avulla itsenäisesti. REST-palveluiden toteuttamisesta minulla oli kokemusta ainoastaan Spring Boot:sta Javalla. Työn edetessä huomasin, että rakenteen hahmottamisessa tästä oli apua. Löytämäni videotutoriaali oli melko suoraviivainen. Toki jouduin hyödyntämään runsaasti eri ominaisuuksien omaa dokumentaatiota, jotta sain syvempää ymmärrystä tekemiseen.
 
-Videotutoriaalien ongelmana on yleensä, että ne eivät ole välttämättä ajantasalla. Näin kävi esimerkiksi remove-funktion kanssa, jota kutsuttiin poistamaan yksittäinen fakta id:n perusteella. Sain virheeksi "remove is not a function", ja pienen selvittelyn jälkeen paljastui, että kyseinen tapa oli vanhentunut. Löysin ajantasaiset operaatiot dokumentaatiosta, joten sitä olisi pitänyt hyödyntää tekemisen rinnalla alusta asti.
+Videotutoriaalien ongelmana on yleensä, että ne eivät ole välttämättä ajantasalla. Näin kävi esimerkiksi remove-funktion kanssa, jota kutsuttiin controllerissa poistamaan yksittäinen fakta id:n perusteella. Sain virheeksi "remove is not a function", ja pienen selvittelyn jälkeen paljastui, että kyseinen tapa oli vanhentunut. Löysin ajantasaiset operaatiot [dokumentaatiosta](https://mongoosejs.com/docs/queries.html), joten sitä olisi pitänyt hyödyntää tekemisen rinnalla alusta asti.
 
-Koska minulla ei ollut aikaisempaa kokemusta MongoDB:n käytöstä, valitsin tutoriaalissa käytetyn Mongoose:n tietokannan yhteyden luomiseen, sekä datan ja kyselyiden käsittelyyn. Jälkeenpäin jäin pohtimaan, olisiko sovelluksessa ollut hyödyllisempää käyttää pelkkää MongoDB-ajuria. Hämmennystä Mongoose:ssa aiheutti esimerkiksi, onko tietokantayhteyden sulkeminen tarpeellista. Tähän en löytänyt täysin yksiselitteistä vastausta.
+Valitsin tutoriaalissa käytetyn Mongoose:n tietokannan yhteyden luomiseen, sekä datan ja kyselyiden käsittelyyn, koska minulla ei ollut mitään vertailupohjaa. Jälkeenpäin jäin pohtimaan, olisiko sovelluksessa ollut hyödyllisempää käyttää pelkkää MongoDB-ajuria. Hämmennystä Mongoose:ssa aiheutti esimerkiksi se, onko tietokantayhteyden sulkeminen tarpeellista. Tähän en löytänyt täysin suoraviivaista vastausta.
 
-Päädyin luomaan yksinkertaisen tietotyypin.
+Työ auttoi minua oppimaan enemmän projektin rakenteesta, ja ominaisuuksien jakamisesta osiin. Tietokannan data jäi hyvin yksinkertaiseksi, mutta toisaalta kokonaisuutta oli helpompi ymmärtää. Ideaa voisi kehittää monella tavalla eteenpäin. Tietokantaan voisi esimerkiksi luoda lisää kokoelmia, joita yhdistää toisiinsa. Lisäksi backend-puoelle voisi luoda graafisen käyttöliittymän, jonka kautta eri CRUD-toimintoja voisi suorittaa. Tällä hetkellä kaikki kulkee vain Postmanin kautta.

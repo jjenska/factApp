@@ -2,17 +2,23 @@
 
 #### Sisällys
 
-1. [Johdanto](#johdanto)
-2. [Arkkitehtuurikaavio](#arkkitehtuurikaavio)
-3. [REST ja reititys](#rest)
-4. [Virheiden käsittely](#virheiden_käsittely)
-5. [Tietokanta](#tietokanta)
-   5.1 [MongoDB ja Mongoose](#mongo-mongoose)
-   5.2 [Schema](#schema)
-   5.3 [Mongo Compass](#compass)
-6. [React](#react)
-7. [Yhteenveto](#yhteenveto)
-8. [testi]
+**[1. Johdanto](#johdanto)**
+
+**[2. Arkkitehtuurikaavio](#arkkitehtuurikaavio)**
+
+**[3. REST ja reititys](#rest)**
+
+**[4. Virheiden käsittely](#virheiden_käsittely)**
+
+**[5. Tietokanta](#tietokanta)**
+
+- [5.1 MongoDB ja Mongoose](#mongo-mongoose)
+- [5.2 Schema](#schema)
+- [5.3 Mongo Compass](#compass)
+
+**[6. React](#react)**
+
+**[7. Yhteenveto](#yhteenveto)**
 
 #### 1. Johdanto <a name="johdanto"></a>
 

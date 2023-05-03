@@ -1,3 +1,3 @@
 ### MERN-stack cat fact application
 
-Done as a part of Haaga-Helia course Ohjelmistokehityksen teknologioita. See [report](#/raportti.md)
+Done as a part of Haaga-Helia course Ohjelmistokehityksen teknologioita. See [report](/raportti.md)

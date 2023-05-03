@@ -114,7 +114,7 @@ Mongoose Schema määrittelee kokoelmaan kuuluvien dokumenttien tietotyypit ([l�
 
 Seuraamassani tutoriaalissa nostettiin esiin MongoDB:n tarjoama graafinen käyttöliittymä MongoDB Compass. Päätin ottaa sen käyttöön, jotta testidatan asettaminen olisi vaivatonta. Tätä varten vilkaisin Compass:n omaa [dokumentaatiota](https://www.mongodb.com/docs/compass/current/documents/insert/). Käyttämäni data oli valmiiksi JSON-muodossa, joten sen syöttäminen osoittautui helpoksi:
 
-![Mongo Compass tiedon syöttäminen](/assets/insert_document.png)
+<img src=/assets/insert_document.png width="500" height="400"/>
 
 Kuvan faktat on poimittu avoimesta [rajapinnasta](https://catfact.ninja/). Tiedon syöttämisen jälkeen testasin datan siirtymisen Postmanilla.
 
@@ -148,4 +148,4 @@ Videotutoriaalien ongelmana on yleensä, että ne eivät ole välttämättä aja
 
 Valitsin tutoriaalissa käytetyn Mongoose:n tietokannan yhteyden luomiseen, sekä datan ja kyselyiden käsittelyyn, koska minulla ei ollut mitään vertailupohjaa. Jälkeenpäin jäin pohtimaan, olisiko sovelluksessa ollut hyödyllisempää käyttää pelkkää MongoDB-ajuria. Tässä voisi olla yksi syventämisen aihe tulevaisuudessa. Hämmennystä Mongoose:ssa aiheutti esimerkiksi se, onko tietokantayhteyden sulkeminen tarpeellista. Tähän en löytänyt täysin suoraviivaista vastausta.
 
-Työ auttoi minua oppimaan projektin rakenteesta, ja ominaisuuksien jakamisesta osiin. Oli myös mukava saada vertailua Spring Boot:iin. Koin Express:n ja Noden käytön mielekkäänä, koska esimerkiksi eri riippuvuuksien asentaminen on kätevää. Tietokannan data jäi hyvin yksinkertaiseksi, mutta toisaalta kokonaisuutta oli helpompi ymmärtää. Projektia voisi kehittää monella tavalla eteenpäin. Haluaisin luoda backend-puolelle graafisen käyttöliittymän, jonka kautta eri CRUD-toimintoja voisi suorittaa. Tällä hetkellä kaikki kulkee vain esimerkiksi Postmanin kautta. Lisäksi kiinnostaisi käyttäjien ja tunnistautumisen luominen.
+Työ auttoi minua oppimaan projektin rakenteesta, ja ominaisuuksien jakamisesta osiin. Oli myös mukava saada vertailua Spring Boot:iin. Koin Express:n ja Noden käytön mielekkäänä, koska esimerkiksi eri riippuvuuksien asentaminen on kätevää. Tietokannan data jäi hyvin yksinkertaiseksi, mutta toisaalta kokonaisuutta oli helpompi ymmärtää. Projektia voisi kehittää monella tavalla eteenpäin. Haluaisin luoda backend-puolelle graafisen käyttöliittymän, jonka kautta eri CRUD-toimintoja voisi suorittaa. Tällä hetkellä kaikki kulkee vain esimerkiksi Postmanin kautta.

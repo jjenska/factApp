@@ -1,7 +1,3 @@
 ### MERN-stack cat fact application
 
-Backend dependencies & usage
-
-> cd backend
-> npm install
-> npm run server
+Done as a part of Haaga-Helia course Ohjelmistokehityksen teknologioita. See raportti.md.
